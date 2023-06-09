@@ -22,17 +22,17 @@ const game = () => {
  
                 const movesLeft = document.querySelector('.movesleft');
                 moves++;
-                movesLeft.innerText = `Moves Left: ${3-moves}`;
+                movesLeft.innerText = `Moves Left: ${5-moves}`;
                  
  
-                const choiceNumber = Math.floor(Math.random()*3);
+                const choiceNumber = Math.floor(Math.random()*5);
                 const computerChoice = computerOptions[choiceNumber];
  
                 // Function to check who wins
                 winner(this.innerText,computerChoice)
                  
                 // Calling gameOver function after 10 moves
-                if(moves == 3){
+                if(moves == 5){
                     gameOver(playerOptions,movesLeft);
                 }
             })
